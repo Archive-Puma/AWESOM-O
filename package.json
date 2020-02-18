@@ -1,10 +1,10 @@
 {
-  "name": "awesom-o_ctf",
+  "name": "awesom-o",
   "version": "1.0.0",
-  "description": "A Discord bot that checks current and upcoming CTFs",
+  "description": "Handler for all the awesom-o bots",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "npm start --prefix CTF"
   },
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
   "keywords": [
     "discord",
     "bot",
-    "ctf",
+    "awesom-o",
     "hackerspace"
   ],
   "author": "Kike Fontán <kikefontanlorenzo@gmail.com> (@CosasDePuma)",
@@ -21,10 +21,5 @@
   "bugs": {
     "url": "https://github.com/cosasdepuma/awesom-o/issues"
   },
-  "homepage": "https://github.com/cosasdepuma/awesom-o#readme",
-  "dependencies": {
-    "discord.js": "^11.5.1",
-    "dotenv": "^8.2.0"
-  },
-  "devDependencies": {}
+  "homepage": "https://github.com/cosasdepuma/awesom-o#readme"
 }
