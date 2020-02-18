@@ -1,10 +1,10 @@
 {
   "name": "awesom-o",
   "version": "1.0.0",
-  "description": "Handler for all the awesom-o bots",
+  "description": "Handler for all the AWESOM-O bots",
   "main": "index.js",
   "scripts": {
-    "start": "node CTF/index.js"
+    "start": "node bots/HSCTF.js"
   },
   "repository": {
     "type": "git",
