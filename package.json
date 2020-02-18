@@ -24,6 +24,7 @@
   "homepage": "https://github.com/cosasdepuma/awesom-o#readme",
   "dependencies": {
     "discord.js": "^11.5.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2"
   }
 }
