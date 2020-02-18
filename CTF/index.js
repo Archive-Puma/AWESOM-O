@@ -10,7 +10,7 @@ config_bot = () => {
 main = () => {
     // Configuration
     check_dependencies();
-    require("dotenv").config();
+    require("../dotenv").config();
     // Start the client
     const client = config_bot();
     try { client.login(process.env.DISCORD_TOKEN); }
@@ -18,7 +18,7 @@ main = () => {
 }
 
 check_dependencies = () => {
-    try { require('discord.js'); require('dotenv'); }
+    try { require('../discord.js'); require('../dotenv'); }
     catch(_) { throw Error("Dependencies are not installed"); }
 }
 
