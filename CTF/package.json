@@ -1,0 +1,29 @@
+{
+  "name": "hackerspace-ctf",
+  "version": "1.0.0",
+  "description": "A Discord bot that checks current and upcoming CTFs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cosasdepuma/awesom-o.git"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "ctf",
+    "hackerspace"
+  ],
+  "author": "Kike Fontán <kikefontanlorenzo@gmail.com> (@CosasDePuma)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cosasdepuma/awesom-o/issues"
+  },
+  "homepage": "https://github.com/cosasdepuma/awesom-o#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0"
+  }
+}
