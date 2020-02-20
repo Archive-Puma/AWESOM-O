@@ -1,7 +1,7 @@
 // Modules
 var Discord, dotenv, request;
 // Default image
-const NOLOGO = "https://pbs.twimg.com/profile_images/2189766987/ctftime-logo-avatar_400x400.png";
+const NOLOGO = 'https://pbs.twimg.com/profile_images/2189766987/ctftime-logo-avatar_400x400.png';
 
 const ctftime = () => {
     // CTFTime.org API
@@ -41,7 +41,7 @@ const show = (channel,ctfs,current) => {
                 .setThumbnail(ctf.logo === '' ? NOLOGO : ctf.logo)
                 .setDescription(ctf.description)
                 .addField('Tipo', ctf.format, true)
-                .addField('Empieza', starttime)
+                .addField('Empieza', starttime, true)
                 .addField('Duración', duracion, true);
             // Send the CTFs
             oneAtLeast = true;
@@ -49,13 +49,13 @@ const show = (channel,ctfs,current) => {
         }
     }
     // No CTFs message
-    if(!oneAtLeast) { channel.send("```No existen CTFs Online en este momento...```"); }
+    if(!oneAtLeast) { channel.send('```No existen CTFs Online en este momento...```'); }
 };
 
 // Get CTFs async to sync wrapper
 const get_ctfs = async (channel,current) => await ctftime()
         .then((ctfs) => show(channel,ctfs,current))
-        .catch((_) => { throw Error("Error in requests") });
+        .catch((_) => { throw Error('Error in requests') });
 
 const help = (channel) => {
     // Helper text
@@ -96,7 +96,7 @@ const main = () => {
     // Start the client
     const client = config_bot();
     try { client.login(process.env.DISCORDTOKEN_CTF); }
-    catch(_) { throw Error("Cannot log in Discord"); }
+    catch(_) { throw Error('Cannot log in Discord'); }
 };
 
 const check_dependencies = () => {
@@ -105,7 +105,7 @@ const check_dependencies = () => {
         Discord = require('discord.js');
         dotenv = require('dotenv');
         request = require('request');
-    } catch(_) { throw Error("Dependencies are not installed"); }
+    } catch(_) { throw Error('Dependencies are not installed'); }
 };
 
 const entrypoint = () => {
@@ -117,6 +117,6 @@ const entrypoint = () => {
 /* Some good stuff:
     - Heavely inspired by:
         https://github.com/NullPxl/NullCTF
-    - Maybe I should implement a "remove command" method based on this:
+    - Maybe I should implement a 'remove command' method based on this:
         https://medium.com/discordbot/create-a-clear-command-for-your-discord-js-bot-4cc4547ca3b
 */

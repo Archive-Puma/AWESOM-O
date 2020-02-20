@@ -4,7 +4,8 @@
   "description": "Handler for all the AWESOM-O bots",
   "main": "index.js",
   "scripts": {
-    "start": "node bots/HSCTF.js"
+    "test": "node bots/HSHTB.js",
+    "start": "node bots/HSCTF.js &; node bots/HSHTB.js &"
   },
   "repository": {
     "type": "git",
