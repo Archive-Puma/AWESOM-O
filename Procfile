@@ -1,1 +1,1 @@
-bots: npm start
+bots: npm run ctf &; npm run htb
