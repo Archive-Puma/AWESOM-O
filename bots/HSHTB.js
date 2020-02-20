@@ -49,7 +49,7 @@ const show = (channel,machine,one) => {
         let active = '```Máquinas activas:\n\n';
         for(m of machine)
             if(!m.retired)
-                active += `[${m.id + 1}] ${m.name}\n`;
+                active += `[${m.id}] ${m.name}\n`;
         active += `\nEscribe ${process.env.PREFIX}htb <id> para obtener información sobre una máquina en concreto.`;
         active += '```';
         // Send the list of active machines
