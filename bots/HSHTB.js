@@ -31,8 +31,6 @@ const show = (channel,machine,one) => {
         // Calculate dates in Spanish format
         let release_split = machine.release.split('-');
         let release = `${release_split[2]}/${release_split[1]}/${release_split[0]}`;
-        let retired_split = machine.retired_date.split('-');
-        let retired = `${retired_split[2]}/${retired_split[1]}/${retired_split[0]}`;
         // Make the card
         const card = new Discord.RichEmbed()
             .setColor('#' + Math.floor(Math.random()*16777215).toString(16))
@@ -42,7 +40,11 @@ const show = (channel,machine,one) => {
             .addField('IP', machine.ip, true)
             .addField('Estado actual', machine.retired ? 'Retirada' : 'Activa', true)
             .addField('Fecha de salida', release, true)
-            .addField('Fecha de retirada', retired, true);
+        if(machine.retired_date) {
+            let retired_split = machine.retired_date.split('-');
+            let retired = `${retired_split[2]}/${retired_split[1]}/${retired_split[0]}`;
+            card.addField('Fecha de retirada', retired, true);
+        }
         channel.send(card);
     } else {
         // Make a list of active machines
